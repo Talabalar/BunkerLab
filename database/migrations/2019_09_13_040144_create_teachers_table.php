@@ -17,10 +17,12 @@ class CreateTeachersTable extends Migration
             $table->bigIncrements('id');
             $table->string('name',150);
             $table->string('surname',150);
-            $table->string('password')->unique();
-            $table->string('email')->unique()->nullable();
+            $table->string('username')->unique()->nullable();
             $table->string('passport')->unique();
+            $table->integer('identity')->default('3');
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

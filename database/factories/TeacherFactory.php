@@ -9,8 +9,8 @@ $factory->define(Teacher::class, function (Faker $faker) {
     return [
         'name'=>$faker->firstName,
         'surname'=>$faker->lastName,
-        'password'=>$faker->password,
-        'email'=>$faker->safeEmail,
+        'username'=>$faker->userName,
         'passport'=>$faker->uuid,
+        'user_id'=>$faker->numberBetween(1,50),
     ];
 });

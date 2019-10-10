@@ -1,0 +1,1 @@
+Bu sinov korinishidagi proekt
